@@ -1,50 +1,271 @@
-# Hafis Sabeer — Portfolio
+# Hafis Sabeer — Personal Portfolio
 
-A static, dependency-free portfolio site. No build step required — open `index.html`
-in a browser, or deploy the folder as-is to any static host (GitHub Pages, Netlify, Vercel, etc.).
+A responsive personal portfolio website showcasing my experience, skills, projects, certifications, and software engineering work across **development, QA, and test automation**.
 
-## Structure
+The portfolio is designed as a lightweight static website with no build process or framework dependency, making it simple to maintain and deploy.
 
+## ✨ Features
+
+### 👨‍💻 Professional Profile
+
+* Introduction and professional summary
+* Development and QA-focused experience
+* Technical skills and tools
+* Career journey
+* Education and certifications
+
+### 🚀 Projects
+
+Showcase of selected personal and technical projects, including:
+
+* Job Application Tracker
+* Fuel at Door Step
+* Playwright automation projects
+* Other software development and testing projects
+
+Each project can include:
+
+* Project description
+* Technologies used
+* GitHub repository
+* Live demo
+
+### 🧪 QA & Automation
+
+The portfolio highlights experience across:
+
+* Functional testing
+* API testing
+* UI automation
+* Selenium
+* Playwright
+* REST Assured
+* Postman
+* TestNG
+* Cucumber / BDD
+* CI/CD with Jenkins
+
+### 💻 Development
+
+The portfolio also presents development-focused skills and projects using:
+
+* Java
+* JavaScript
+* Python
+* HTML
+* CSS
+* REST APIs
+* SQL
+* Git & GitHub
+
+### 📜 Certifications & Education
+
+Dedicated sections for:
+
+* Academic background
+* Professional certifications
+* Relevant coursework
+* Learning achievements
+
+### 📬 Contact
+
+A contact section allows visitors and recruiters to get in touch directly.
+
+The form can be connected to a service such as Formspree or EmailJS, or to a custom backend.
+
+### 📱 Responsive Design
+
+The portfolio is designed to provide a consistent experience across:
+
+* Desktop
+* Tablet
+* Mobile
+
+## 🛠️ Tech Stack
+
+| Category        | Technologies   |
+| --------------- | -------------- |
+| Structure       | HTML5          |
+| Styling         | CSS3           |
+| Functionality   | JavaScript     |
+| Data            | JavaScript     |
+| Deployment      | Static hosting |
+| Version Control | Git / GitHub   |
+
+## 📁 Project Structure
+
+```text
+PersonalPortfolio/
+│
+├── assets/
+│   ├── data.js
+│   ├── script.js
+│   └── styles.css
+│
+├── index.html
+├── README.md
+└── resume/
+    └── Hafis-Sabeer-Resume.pdf
 ```
-index.html          Page markup / section skeletons
-assets/styles.css    All styling (design tokens live at the top of the file)
-assets/data.js        ALL editable content — projects, skills, timeline, certs, links
-assets/script.js       Renders the page from data.js + handles nav/scroll/form behavior
+
+### `index.html`
+
+Contains the main page structure and portfolio sections.
+
+### `assets/styles.css`
+
+Contains the complete visual design, responsive styles, layouts, and design tokens.
+
+### `assets/data.js`
+
+Contains the portfolio content, including:
+
+* Profile information
+* Skills
+* Projects
+* Certifications
+* Education
+* Career timeline
+* GitHub repositories
+* Contact information
+
+### `assets/script.js`
+
+Handles:
+
+* Dynamic content rendering
+* Navigation
+* Scrolling behavior
+* Interactive elements
+* Contact form behavior
+
+## ⚙️ Updating the Portfolio
+
+Most portfolio content can be updated from:
+
+```text
+assets/data.js
 ```
 
-## Making updates
+Projects, skills, certifications, career information, GitHub repositories, and profile information are maintained through the data configuration.
 
-You should only ever need to edit **`assets/data.js`**. Everything on the page —
-projects, skills, certifications, the timeline, contact links — is generated from
-that file at load time.
+To add a new project, add an entry to the `projects` collection.
 
-Anything marked `"PLACEHOLDER — ..."` in `data.js` is a spot you should fill in
-before sharing the site with recruiters:
+To add a certification, add an entry to the `certifications` collection.
 
-- `profile.email`, `profile.github`, `profile.linkedin`, `profile.location`
-- `education.institution`, `education.graduationYear`, `education.coursework`
-- `certifications[].year`, `certifications[].link`
-- `projects[].github` (and `.demo` if you have a live URL)
-- `github.profileUrl` and `github.featuredRepos`
-- `careerJourney` — add a real role by pushing a new object with the same shape,
-  or delete the placeholder entry if you'd rather keep the page project-only
+To add a GitHub project, add it to the featured repositories collection.
 
-## Resume
+No changes to the HTML structure are normally required.
 
-Drop your resume PDF at `resume/Hafis-Sabeer-Resume.pdf` relative to the site root
-(create the `resume/` folder). The path is configurable in `data.js` via
-`profile.resumePath` if you want to rename it.
+## 📄 Resume
 
-## Contact form
+The portfolio can display a downloadable resume.
 
-The contact form currently uses a placeholder handler (`initContactForm` in
-`script.js`) that just confirms the message was captured — it does not send
-anything anywhere, and no API keys are stored in the code. Before publishing,
-wire it up to a form service such as Formspree or EmailJS, or your own backend
-endpoint.
+Place the resume at:
 
-## Adding a project, certification, or repository
+```text
+resume/Hafis-Sabeer-Resume.pdf
+```
 
-Open `assets/data.js` and push a new object into the relevant array
-(`projects`, `certifications`, or `github.featuredRepos`) — the page picks it up
-automatically, no HTML or CSS changes needed.
+The resume path can also be configured through the portfolio data.
+
+## 📬 Contact Form
+
+The portfolio includes a contact form for visitors to send messages.
+
+The frontend currently handles the form interaction. For production use, the form can be connected to:
+
+* Formspree
+* EmailJS
+* A custom backend API
+
+No sensitive API credentials should be stored directly in the frontend.
+
+## 🚀 Running Locally
+
+This is a static website and does not require a build step.
+
+### Option 1 — Open directly
+
+Clone the repository:
+
+```bash
+git clone https://github.com/haafiiz/PersonalPortfolio.git
+```
+
+Navigate into the project:
+
+```bash
+cd PersonalPortfolio
+```
+
+Open:
+
+```text
+index.html
+```
+
+in a browser.
+
+### Option 2 — Local development server
+
+Using Python:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open:
+
+```text
+http://localhost:8000
+```
+
+## 🌐 Deployment
+
+Because the project is a static website, it can be deployed to platforms such as:
+
+* GitHub Pages
+* Netlify
+* Vercel
+* Any static web hosting service
+
+No backend server or build pipeline is required for the current version.
+
+## 🎯 Purpose
+
+This portfolio was built to provide a central place to showcase my:
+
+* Professional experience
+* Software development projects
+* QA and test automation experience
+* Technical skills
+* Certifications
+* GitHub work
+* Resume and contact information
+
+The goal is to present a broader software engineering profile covering both **building software and ensuring software quality**.
+
+## 🔮 Future Improvements
+
+Potential improvements include:
+
+* Enhanced project case studies
+* Blog / technical articles
+* Project filtering
+* GitHub activity integration
+* Improved contact form backend
+* Accessibility improvements
+* Performance and SEO enhancements
+
+## 👤 Author
+
+**Hafis Sabeer**
+
+Software Engineer | QA Automation | Software Development
+
+GitHub: https://github.com/haafiiz
+
+## 📌 Repository
+
+[View the source code on GitHub](https://github.com/haafiiz/PersonalPortfolio)
