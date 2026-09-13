@@ -287,21 +287,43 @@
      backend, etc.) before publishing. No keys live in this file.
   ------------------------------------------------------------ */
   function initContactForm() {
-    const form = document.getElementById("contactForm");
-    const status = document.getElementById("formStatus");
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      if (!form.checkValidity()) {
-        status.textContent = "Please fill in all fields with a valid email.";
-        status.className = "form-status show err";
-        return;
-      }
-      // PLACEHOLDER submission — replace with a real endpoint call.
-      status.textContent = "Message captured locally. Connect a form service to actually send this.";
-      status.className = "form-status show ok";
-      form.reset();
+    const form = document.getElementById("contact-form");
+
+    if (!form) return;
+
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+
+        try {
+            const response = await fetch("https://formspree.io/f/xkjnljyy", {
+                method: "POST",
+                body: new FormData(form),
+                headers: {
+                    Accept: "application/json"
+                }
+            });
+
+            if (response.ok) {
+                form.reset();
+                alert("Thanks! Your message has been sent.");
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        } catch (error) {
+            console.error("Contact form error:", error);
+            alert("Unable to send your message. Please try again.");
+        } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = originalText;
+        }
     });
-  }
+}
 
   /* ------------------------------------------------------------
      NAV: scroll state, mobile menu, active link, back-to-top

@@ -18,14 +18,14 @@ const SITE_DATA = {
   // ------------------------------------------------------------
   profile: {
     name: "Hafis Sabeer",
-    title: "QA / Test Automation Engineer",
-    headline: "Building reliable software through automation and quality engineering.",
-    intro: "I work at the intersection of software testing and engineering — designing UI automation suites, validating APIs, and wiring test frameworks into CI/CD pipelines so teams can ship with confidence.",
-    email: "PLACEHOLDER — your email address",
-    github: "PLACEHOLDER — https://github.com/your-username",
-    linkedin: "PLACEHOLDER — https://linkedin.com/in/your-profile",
-    resumePath: "/resume/Hafis-Sabeer-Resume.pdf",
-    location: "PLACEHOLDER — City, Country"
+    title: "Software Engineer",
+    headline: "Building software, automating quality, and solving real-world problems.",
+    intro: "I’m a software engineer with experience in application development, automation, APIs, and CI/CD. I build practical software solutions while using automation and quality engineering to make applications more reliable, maintainable, and scalable.",
+    email: "hafis.sabeer3@gmail.com",
+    github: "https://github.com/haafiiz",
+    linkedin: "https://www.linkedin.com/in/hafis-sabeer/",
+    resumePath: "/resume/Resume (1).pdf",
+    location: "Kochi, India"
   },
 
   // ------------------------------------------------------------
@@ -43,9 +43,11 @@ const SITE_DATA = {
   ],
 
   aboutParagraphs: [
-    "My focus is quality engineering — making sure software behaves the way it's supposed to before it reaches a user. That means designing automation that catches regressions early, writing UI test suites that mirror real user journeys, and validating APIs at the request/response level.",
-    "I build with Playwright and Selenium for UI automation, REST Assured and Postman for API testing, and wire test suites into Jenkins so verification happens continuously, not as an afterthought. Java, JavaScript/TypeScript, and Python are my working languages, backed by SQL for data validation.",
-    "I treat testing as an engineering discipline in its own right — one that's improving constantly. I'm continually sharpening my grasp of test architecture, CI/CD practices, and automation frameworks."
+    "My approach to software engineering goes beyond simply making applications work — I focus on building reliable, maintainable, and well-tested software. I enjoy working across development, automation, APIs, and CI/CD to solve problems and create better engineering workflows.",
+
+    "I have experience building applications and working with technologies such as Java, Python, JavaScript/TypeScript, SQL, and web frameworks. Alongside development, I use Playwright, Selenium, REST Assured, and Postman to automate UI and API testing, while integrating test suites with Jenkins for continuous validation.",
+
+    "I see development and testing as two parts of the same engineering process. Whether I'm building a feature, developing an API, automating a workflow, or validating a release, my goal is to create software that is reliable, maintainable, and ready for real-world use."
   ],
 
   // ------------------------------------------------------------
@@ -100,7 +102,7 @@ const SITE_DATA = {
         "Cross-browser testing",
         "Jenkins CI integration"
       ],
-      github: "PLACEHOLDER — repository URL",
+      github: "https://github.com/haafiiz/Playwright",
       demo: null,
       category: "automation"
     },
@@ -121,32 +123,37 @@ const SITE_DATA = {
       category: "automation"
     },
     {
-      title: "SKU Pricing Prediction System",
-      description: "A machine learning project that analyzes product pricing, discount, and bestseller ranking data to support pricing decisions.",
-      technologies: ["Python", "Pandas", "Scikit-learn", "Random Forest", "Django", "MySQL"],
-      features: [],
-      github: "PLACEHOLDER — repository URL",
-      demo: null,
-      category: "ml"
-    },
-    {
-      title: "Respiratory Sound Analysis",
-      description: "A machine learning project focused on respiratory sound analysis and disease detection using audio features.",
-      technologies: ["Python", "Django", "Machine Learning", "MFCC", "Random Forest", "MySQL"],
-      features: [],
-      github: "PLACEHOLDER — repository URL",
-      demo: null,
-      category: "ml"
-    },
-    {
       title: "Fuel at Doorstep",
       description: "An e-commerce web application for fuel delivery management.",
       technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
-      features: [],
-      github: "PLACEHOLDER — repository URL",
+      features: [
+        "Customer authentication",
+        "Fuel selection and dynamic pricing",
+        "Location/PIN-code validation",
+        "Scheduled delivery",
+        "Order tracking and status management",
+        "Admin dashboard"
+      ],
+      github: "https://github.com/haafiiz/mini-project",
       demo: null,
       category: "web"
-    }
+    },
+    {
+      title: "Job Application Tracker",
+      description: "A responsive full-stack web application for managing job applications, tracking recruitment progress, setting follow-up reminders, and analyzing job-search activity.",
+      technologies: ["HTML", "CSS", "JavaScript", "Progressive Web App (PWA)", "Node.js", "REST API", "SQLite"],
+      features: [
+        "Dashboard & analytics",
+        "Job application CRUD",
+        "Search & advanced filtering",
+        "Follow-up reminders",
+        "REST API",
+        "SQLite database"
+      ],
+      github: "https://github.com/haafiiz/Job-Application-Tracker",
+      demo: null,
+      category: "Web"
+    },
   ],
 
   // ------------------------------------------------------------
@@ -175,14 +182,18 @@ const SITE_DATA = {
   // ------------------------------------------------------------
   careerJourney: [
     {
-      organization: "PLACEHOLDER — organization / employer name",
-      role: "PLACEHOLDER — role / job title",
-      duration: "PLACEHOLDER — e.g. Jan 2025 – Present",
+      organization: "Cognizant",
+      role: "Programmer Analyst",
+      duration: "Oct 2024 - Present",
       responsibilities: [
-        "PLACEHOLDER — key responsibility",
-        "PLACEHOLDER — key responsibility"
+        "Designed and executed functional, integration, and regression test cases across web and API applications.",
+        "Built UI automation suites using Selenium, Playwright, and Cucumber (BDD) with Page Object Model.",
+        "Automated API testing with REST Assured and Postman, cutting manual regression time by 35–40%.",
+        "Validated backend data via SQL and cross-checked API responses against database records.",
+        "Owned defect lifecycle in JIRA (150+ defects) and integrated automation into Jenkins CI/CD pipelines.",
+        "Led GenAI-assisted testing adoption, reducing test design time by 20%."
       ],
-      technologies: ["PLACEHOLDER"]
+      technologies: ["Playwright", "Selenium", "REST Assured", "Postman", "ReadyAPI", "Java", "SQL", "TestNG", "Cucumber", "Jenkins", "JIRA", "Git"]
     },
     {
       organization: "Independent Projects",
@@ -202,12 +213,16 @@ const SITE_DATA = {
   // ------------------------------------------------------------
   education: {
     degree: "B.Tech in Computer Science and Engineering",
-    institution: "PLACEHOLDER — institution name",
-    graduationYear: "PLACEHOLDER — graduation year",
+    institution: "APJ Abdul Kalam Technological University - KTU",
+    graduationYear: "2024",
     coursework: [
-      "PLACEHOLDER — relevant coursework",
-      "PLACEHOLDER — relevant coursework",
-      "PLACEHOLDER — relevant coursework"
+      "Software Engineering",
+      "Object-Oriented Programming",
+      "Database Management Systems",
+      "Data Structures & Algorithms",
+      "Computer Networks",
+      "Operating Systems",
+      "Cyber Security"
     ]
   },
 
@@ -216,10 +231,40 @@ const SITE_DATA = {
   // ------------------------------------------------------------
   certifications: [
     {
+      name: "Al Fluency Framework & Foundations",
+      issuer: "Anthropic",
+      year: "2026",
+      link: "https://verify.skilljar.com/c/arkvfrg86kg6"
+    },
+    {
+      name: "Introduction to Model Context Protocol",
+      issuer: "Anthropic",
+      year: "2026",
+      link: "https://verify.skilljar.com/c/of9qjr5trfox"
+    },
+    {
+      name: "Context Engineering Foundation",
+      issuer: "Cognizant",
+      year: "2026",
+      link: "https://www.credly.com/badges/01d2ee1b-0ec2-4433-bd77-c9eda8354837/linked_in_profile"
+    },
+    {
+      name: "Building with the Claude API",
+      issuer: "Anthropic",
+      year: "2026",
+      link: "https://verify.skilljar.com/c/dpv2ok3mg4ie"
+    },
+    {
+      name: "Claude Code in Action",
+      issuer: "Anthropic",
+      year: "2026",
+      link: "https://verify.skilljar.com/c/pteva4x5ofu6"
+    },
+    {
       name: "Programming, Data Structures and Algorithms using Python",
       issuer: "NPTEL",
-      year: "PLACEHOLDER — year",
-      link: "PLACEHOLDER — certificate URL"
+      year: "2023",
+      link: "https://drive.google.com/file/d/1HfKwkmtQB4iTOnRqbQpPfDQS575eZufq/view?usp=drive_link"
     }
   ],
 
@@ -229,13 +274,14 @@ const SITE_DATA = {
   // add repos here as they're published.
   // ------------------------------------------------------------
   github: {
-    profileUrl: "PLACEHOLDER — https://github.com/your-username",
+    profileUrl: "https://github.com/haafiiz",
     featuredRepos: [
       {
-        name: "PLACEHOLDER — repository name",
-        description: "PLACEHOLDER — short description of the repository",
-        technologies: ["PLACEHOLDER"],
-        link: "PLACEHOLDER — repository URL"
+        name: "Job Application Tracker",
+        description: "A responsive full-stack web application for managing job applications, tracking recruitment progress, setting follow-up reminders, and analyzing job-search activity. The application provides a centralized way to record applications, monitor their current status, search and filter opportunities, and keep track of upcoming reminders.",
+        technologies: [
+          "HTML", "CSS", "JavaScript", "Progressive Web App (PWA)", "Node.js", "REST API", "SQLite"],
+        link: "https://github.com/haafiiz/Job-Application-Tracker"
       }
     ]
   }
