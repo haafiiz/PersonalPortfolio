@@ -24,7 +24,7 @@ const SITE_DATA = {
     email: "hafis.sabeer3@gmail.com",
     github: "https://github.com/haafiiz",
     linkedin: "https://www.linkedin.com/in/hafis-sabeer/",
-    resumePath: "/resume/Resume (1).pdf",
+    resumePath: "resume/Hafis_Sabeer.pdf",
     location: "Kochi, India"
   },
 
