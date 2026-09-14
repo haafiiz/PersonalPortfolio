@@ -287,42 +287,53 @@
      backend, etc.) before publishing. No keys live in this file.
   ------------------------------------------------------------ */
   function initContactForm() {
-    const form = document.getElementById("contact-form");
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("formStatus");
 
-    if (!form) return;
+  if (!form) return;
 
-    form.addEventListener("submit", async (event) => {
-        event.preventDefault();
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-        const submitButton = form.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
 
-        submitButton.disabled = true;
-        submitButton.textContent = "Sending...";
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
 
-        try {
-            const response = await fetch("https://formspree.io/f/xkjnljyy", {
-                method: "POST",
-                body: new FormData(form),
-                headers: {
-                    Accept: "application/json"
-                }
-            });
+    status.textContent = "";
+    status.className = "form-status";
 
-            if (response.ok) {
-                form.reset();
-                alert("Thanks! Your message has been sent.");
-            } else {
-                alert("Something went wrong. Please try again.");
-            }
-        } catch (error) {
-            console.error("Contact form error:", error);
-            alert("Unable to send your message. Please try again.");
-        } finally {
-            submitButton.disabled = false;
-            submitButton.textContent = originalText;
+    try {
+      const response = await fetch("https://formspree.io/f/xkjnljyy", {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json"
         }
-    });
+      });
+
+      if (response.ok) {
+        form.reset();
+        status.textContent = "Thanks! Your message has been sent.";
+        status.classList.add("success");
+      } else {
+        const data = await response.json().catch(() => ({}));
+        status.textContent =
+          data.errors?.[0]?.message ||
+          "Something went wrong. Please try again.";
+        status.classList.add("error");
+      }
+    } catch (error) {
+      console.error("Contact form error:", error);
+      status.textContent =
+        "Unable to send your message. Please try again.";
+      status.classList.add("error");
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
+    }
+  });
 }
 
   /* ------------------------------------------------------------
